@@ -9,9 +9,9 @@ public class MineSweeperImp implements MineSweeper {
 		
 		for (String s : rows) {
 			
-			/* check if the input char is a character or a mine */
-			boolean isAllCharValid = s.codePoints().anyMatch(x -> ((char) x != '.' && (char) x != '*'));
-			if (isAllCharValid) {
+			/* check if the input chars are characters or mines */
+			boolean isACharNotValid = s.codePoints().anyMatch(x -> ((char) x != '.' && (char) x != '*'));
+			if (isACharNotValid) {
 				throw new IllegalArgumentException();
 			}
 
